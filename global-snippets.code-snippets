@@ -1,0 +1,305 @@
+/*
+  SNIPPET SYNTAX :
+  {
+    "description": {
+      "scope": "file-extension-that-needs-to-be-supported",
+      "prefix": "trigger-word",
+      "body": [
+        "snippet-code"
+      ],
+      "description": "description"
+    }
+  }
+*/
+{
+  /* STYLED SNIPPETS */
+  "import-styled-components": {
+    "prefix": "imsc",
+    "body": [
+      "import styled from 'styled-components';"
+    ],
+    "description": "import-styled-components"
+  },
+  "import-createGlobalStyle-sc": {
+    "prefix": "imscg",
+    "body": [
+      "import { createGlobalStyle } from 'styled-components';"
+    ],
+    "description": "import-{ createGlobalStyle }-sc"
+  },
+  "import-ThemeProvider-sc": {
+    "prefix": "imsctp",
+    "body": [
+      "import { ThemeProvider } from 'styled-components';"
+    ],
+    "description": "import-{ ThemeProvider }-sc"
+  },
+  "import-{ css }-sc": {
+    "prefix": "imscss",
+    "body": [
+      "import { css } from 'styled-components';"
+    ],
+    "description": "import-{ css }-sc"
+  },
+  "props(destructured)-sc": {
+    "prefix": "scpd",
+    "body": [
+      "${({ ${1:props.?} }) => $2};"
+    ],
+    "description": "props(destructured)-sc"
+  },
+  "props.theme(destructured)-sc": {
+    "prefix": "scpt",
+    "body": [
+      "${({ theme }) => theme.$1};"
+    ],
+    "description": "props.theme(destructured)-sc"
+  },
+  "styled-component": {
+    "prefix": "sc",
+    "body": [
+      "export const ${1:scName} = styled.${2:scType}`",
+      "  $3",
+      "`;"
+    ],
+    "description": "styled-component"
+  },
+  /* NEXT-JS SNIPPETS */
+  "nextjs-normal-function": {
+    "prefix": "nf",
+    "body": [
+      "import Head from 'next/head';",
+      "",
+      "export default function ${1:functionName}() {",
+      "  return (",
+      "    <>",
+      "      <Head>",
+      "        <title>${2:pageTitle}</title>",
+      "        <meta name=\"description\" content=\"$3\" />",
+      "        <meta property=\"og:image\" content=\"$4\" />",
+      "        <meta property=\"og:title\" content=\"$5\" m />",
+      "        <link rel=\"icon\" href=\"/favicon.ico\" />",
+      "      </Head>",
+      "",
+      "      <>$6</>",
+      "    </>",
+      "  );",
+      "}",
+      ""
+    ],
+    "description": "nextjs-normal-function"
+  },
+  "get-static-props": {
+    "prefix": "gspr",
+    "body": [
+      "export const getStaticProps = async (ctx) => {",
+      "  ${1://await fetch data}",
+      "",
+      "  return {",
+      "    props: {",
+      "      data: $2",
+      "    }",
+      "  }",
+      "};"
+    ],
+    "description": "get-static-props"
+  },
+  "get-static-paths": {
+    "prefix": "gspa",
+    "body": [
+      "export const getStaticPaths = async () => {",
+      "  $1",
+      "",
+      "  return {",
+      "    paths: [",
+      "      { params: { $2 } }",
+      "    ],",
+      "    fallback: ${3://true, false, blocking}",
+      "  };",
+      "};"
+    ],
+    "description": "get-static-paths"
+  },
+  "get-serverSide-paths": {
+    "prefix": "gsspr",
+    "body": [
+      "export const getServerSideProps = async (ctx) => {",
+      "  ${1://await fetch data}",
+      "",
+      "  return {",
+      "    props: {",
+      "      data: $2",
+      "    }",
+      "  }",
+      "};"
+    ],
+    "description": "get-serverSide-paths"
+  },
+  "get-initial-props": {
+    "prefix": "gipr",
+    "body": [
+      "${1:test}.getInitialProps = async (ctx) => {",
+      "  ${2://await fetch data}",
+      "",
+      "  return {",
+      "    data: $3",
+      "  }",
+      "};"
+    ],
+    "description": "get-initial-props"
+  },
+  "nextjs-import-for-Image-component": {
+    "prefix": "nii",
+    "body": [
+      "import Image from 'next/image';"
+    ],
+    "description": "nextjs-import-for-Image-component"
+  },
+  "nextjs-import-for-Link-component": {
+    "prefix": "nil",
+    "body": [
+      "import Link from 'next/link';"
+    ],
+    "description": "nextjs-import-for-Link-component"
+  },
+  "nextjs-import-for-Head-component": {
+    "prefix": "nih",
+    "body": [
+      "import Head from 'next/head';"
+    ],
+    "description": "nextjs-import-for-Head-component"
+  },
+  "nextjs-import-for-{useRouter}-component": {
+    "prefix": "niur",
+    "body": [
+      "import {useRouter} from 'next/router';"
+    ],
+    "description": "nextjs-import-for-{useRouter}-component"
+  },
+  /* JAVASCRIPT(ES6) SNIPPETS */
+  "console.log()": {
+    "prefix": "clg",
+    "body": [
+      "console.log($1);"
+    ],
+    "description": "console.log()"
+  },
+  "console.info()": {
+    "prefix": "cli",
+    "body": [
+      "console.info($1);"
+    ],
+    "description": "console.info()"
+  },
+  "javascript-function": {
+    "prefix": "fn",
+    "body": [
+      "function ${1:functionName}(${2:params}) {",
+      "  $3",
+      "};"
+    ],
+    "description": "javascript-function"
+  },
+  "javascript-arrow-function": {
+    "prefix": "afn",
+    "body": [
+      "const ${1:functionName} = (${2:params}) => {",
+      "  $3",
+      "};",
+      ""
+    ],
+    "description": "javascript-arrow-function"
+  },
+  "javascript-async-arrow-function": {
+    "prefix": "asyncfn",
+    "body": [
+      "const ${1:functionName} = async(${2:params}) => {",
+      "  ${3:const res = await fetch();}",
+      "};"
+    ],
+    "description": "javascript-async-arrow-function"
+  },
+  /* REACT-JS SNIPPETS */
+  "import-useState": {
+    "prefix": "imus",
+    "body": [
+      "import { useState } from 'react';"
+    ],
+    "description": "import-useState"
+  },
+  "import-useEffect": {
+    "prefix": "imue",
+    "body": [
+      "import { useEffect } from 'react';"
+    ],
+    "description": "import-useEffect"
+  },
+  "useState": {
+    "prefix": "rus",
+    "body": [
+      "const [${1:stateVar}, set${2:setterFunc}] = useState(${3:initialValue});"
+    ],
+    "description": "useState"
+  },
+  "useEffect": {
+    "prefix": "rue",
+    "body": [
+      "useEffect(() => {",
+      "  $1;",
+      "",
+      "  return () => {",
+      "    ${2:/* clean-up code for unmount */};",
+      "  };",
+      "}, [${3:/* dependencies */}]);$1"
+    ],
+    "description": "useEffect"
+  },
+  "react-functional-component": {
+    "prefix": "rfc",
+    "body": [
+      "export default function ${1:componentName}() {",
+      "  return(",
+      "    ${2:/* JSX goes here */}",
+      "  );",
+      "};"
+    ],
+    "description": "react-functional-component"
+  },
+  "react-functional-component(export)": {
+    "prefix": "rfce",
+    "body": [
+      "function ${1:componentName}() {",
+      "  return(",
+      "    ${2:/* JSX goes here */}",
+      "  );",
+      "};",
+      "",
+      "export default $1;"
+    ],
+    "description": "react-functional-component(export)"
+  },
+  "react-arrow-functional-component": {
+    "prefix": "rafc",
+    "body": [
+      "export const ${1:componentName} = () => {",
+      "  return(",
+      "    ${2:/* JSX goes here */}",
+      "  );",
+      "};"
+    ],
+    "description": "react-arrow-functional-component"
+  },
+  "react-arrow-functional-component(export)": {
+    "prefix": "rafce",
+    "body": [
+      "const ${1:componentName} = () => {",
+      "  return(",
+      "    ${2:/* JSX goes here */}",
+      "  );",
+      "};",
+      "",
+      "export default $1;"
+    ],
+    "description": "react-arrow-functional-component(export)"
+  }
+}
