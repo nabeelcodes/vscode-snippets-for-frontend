@@ -7,9 +7,9 @@ Code snippets for speeding up your workflow :zap:
 These include snippets for :
 
 - [Styled-Components](#styled-components-snippets)
-- [Next-JS](#next-js-snippets)
-- [React-JS](#react-js-snippets)
-- [Javascript-ES6](#javascript-es6-snippets)
+- [Next-JS](#next---js-snippets)
+- [React-JS](#react---js-snippets)
+- [Javascript-ES6](#javascript---es6-snippets)
 
 ## Usage
 
