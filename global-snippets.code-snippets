@@ -1,15 +1,15 @@
 /*
-  SNIPPET SYNTAX :
-  {
-    "description": {
-      "scope": "file-extension-that-needs-to-be-supported",
-      "prefix": "trigger-word",
-      "body": [
-        "snippet-code"
-      ],
-      "description": "description"
-    }
-  }
+EXAMPLE :
+{
+	"description": {
+		"scope": "file-extension-that-needs-to-be-supported",
+		"prefix": "trigger-word",
+		"body": [
+			"snippet-code"
+		],
+		"description": "description"
+	}
+}
 */
 {
   /* STYLED SNIPPETS */
@@ -180,14 +180,14 @@
   "console.log()": {
     "prefix": "clg",
     "body": [
-      "console.log($1);"
+      "console.log($1)"
     ],
     "description": "console.log()"
   },
   "console.info()": {
     "prefix": "cli",
     "body": [
-      "console.info($1);"
+      "console.info($1)"
     ],
     "description": "console.info()"
   },
@@ -234,6 +234,29 @@
     ],
     "description": "import-useEffect"
   },
+  "import-useContext": {
+    "prefix": "imuc",
+    "body": [
+      "import { useContext } from 'react';"
+    ],
+    "description": "import-useContext"
+  },
+  "import-useReducer": {
+    "prefix": "imur",
+    "body": [
+      "import { useReducer } from 'react';"
+    ],
+    "description": "import-useReducer"
+  },
+  "import-createContext": {
+    "prefix": "imcc",
+    "body": [
+      "import { createContext } from 'react';",
+      "",
+      "export const ${1:contextNameInPascalCase} = createContext();"
+    ],
+    "description": "import-createContext"
+  },
   "useState": {
     "prefix": "rus",
     "body": [
@@ -253,6 +276,35 @@
       "}, [${3:/* dependencies */}]);$1"
     ],
     "description": "useEffect"
+  },
+  "useContext": {
+    "prefix": "ruc",
+    "body": [
+      "const ${1:valueFromContext} = useContext(${2:contextName});"
+    ],
+    "description": "useContext"
+  },
+  "useReducer": {
+    "prefix": "rur",
+    "body": [
+      "const [state, dispatch] = useReducer(${1:appReducerName}, ${2:initialStateValue});"
+    ],
+    "description": "useReducer"
+  },
+  "javascript-appReducer-function": {
+    "prefix": "rar",
+    "body": [
+      "const appReducer = (state, action) => {",
+      "  switch (action.type) {",
+      "    case \"${1:actionTypeValue}\":",
+      "      return ${2:newState};",
+      "",
+      "    default: ",
+      "      return state;",
+      "  }",
+      "};"
+    ],
+    "description": "javascript-appReducer-function"
   },
   "react-functional-component": {
     "prefix": "rfc",

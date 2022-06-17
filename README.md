@@ -131,12 +131,43 @@ These include snippets for :
 </code></td>
     </tr>
     <tr>
+      <td><code>imuc</code></td>
+      <td><code>import { useContext } from 'react';
+</code></td>
+    </tr>
+    <tr>
+      <td><code>imur</code></td>
+      <td><code>import { useReducer } from 'react';
+</code></td>
+    </tr>
+    <tr>
+      <td><code>imcc</code></td>
+      <td><code>import { createContext } from 'react';
+</code>
+      <br />
+      <strong>+</strong>
+      <code>export const ${1:contextNameInPascalCase} = createContext();</code>
+      </td>
+    </tr>
+    <tr>
       <td><code>rus</code></td>
       <td>useState boilerplate</td>
     </tr>
     <tr>
       <td><code>rue</code></td>
       <td>useEffect boilerplate with clean-up function</td>
+    </tr>
+    <tr>
+      <td><code>ruc</code></td>
+      <td>useContext boilerplate</td>
+    </tr>
+    <tr>
+      <td><code>rur</code></td>
+      <td>useReducer boilerplate</td>
+    </tr>
+    <tr>
+      <td><code>rar</code></td>
+      <td>javascript appReducer(used as argument in useReducer) function boilerplate</td>
     </tr>
     <tr>
       <td><code>rfc</code></td>
