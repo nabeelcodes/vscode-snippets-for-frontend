@@ -90,13 +90,21 @@ EXAMPLE :
     "prefix": "gspr",
     "body": [
       "export const getStaticProps = async (ctx) => {",
-      "  ${1://await fetch data}",
+      "  const res = await fetch(`${1:url}`);",
+      "",
+      "  if (!res.ok) {",
+      "    return {",
+      "      notFound: true",
+      "    };",
+      "  }",
+      "",
+      "  const dataFromApi = await res.json();",
       "",
       "  return {",
       "    props: {",
       "      data: $2",
       "    }",
-      "  }",
+      "  };",
       "};"
     ],
     "description": "get-static-props"
