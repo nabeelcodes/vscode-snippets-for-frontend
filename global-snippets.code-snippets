@@ -182,6 +182,13 @@ EXAMPLE :
     "description": "nextjs-import-for-{useRouter}-component"
   },
   /* JAVASCRIPT(ES6) SNIPPETS */
+  "javascript-comment": {
+    "prefix": "cmt",
+    "body": [
+      "/* ${1:comment goes here} */"
+    ],
+    "description": "javascript-comment"
+  },
   "console.log()": {
     "prefix": "clg",
     "body": [

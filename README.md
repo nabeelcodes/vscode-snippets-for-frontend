@@ -199,6 +199,10 @@ These include snippets for :
     </tr>
   </thead>
   <tbody>
+  <tr>
+      <td><code>cmt</code></td>
+      <td>javascript comment : <code>/* */</code></td>
+    </tr>
     <tr>
       <td><code>clg</code></td>
       <td><code>console.log()</code></td>
