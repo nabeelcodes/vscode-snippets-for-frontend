@@ -73,7 +73,7 @@ These include snippets for :
   <tbody>
     <tr>
       <td><code>nf</code></td>
-      <td>nextJS normal export function with 'next/head' and other title, meta and link tags included</td>
+      <td>nextJS normal export function with 'next/head' and title, base tags included</td>
     </tr>
     <tr>
       <td><code>gspr</code></td>
@@ -106,6 +106,10 @@ These include snippets for :
     <tr>
       <td><code>niur</code></td>
       <td><code>import {useRouter} from 'next/router';</td>
+    </tr>
+    <tr>
+      <td><code>seo</code></td>
+      <td>all seo tags for a nextjs page component</td>
     </tr>
   </tbody>
 </table>

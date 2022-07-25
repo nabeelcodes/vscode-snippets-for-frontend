@@ -75,7 +75,7 @@ EXAMPLE :
       "    <>",
       "      <Head>",
       "        <title>${2:pageTitle}</title>",
-      "        <meta property=\"og:title\" content=\"$5\" />",
+      "        <base target='_blank' rel='noopener noreferrer' />",
       "      </Head>",
       "",
       "      <>$6</>",
@@ -180,6 +180,23 @@ EXAMPLE :
       "import {useRouter} from 'next/router';"
     ],
     "description": "nextjs-import-for-{useRouter}-component"
+  },
+  "seo tags for nextjs": {
+    "prefix": "seo",
+    "body": [
+      "{/* SEO TAGS */}",
+      "<meta name='title' content={title} key='title' />",
+      "<meta name='description' content={description} key='description' />",
+      "<meta property='og:title' content={title} key='ogTitle' />",
+      "<meta property='og:description' content={description} key='ogDescription' />",
+      "<meta property='og:image' content={url} key='ogImage' />",
+      "<meta property='og:url' content={currentUrl} key='ogUrl' />",
+      "<meta property='twitter:title' content={title} key='twitterTitle' />",
+      "<meta property='twitter:description' content={description} key='twitterDescription' />",
+      "<meta property='twitter:image' content={url} key='twitterImage' />",
+      "<meta property='twitter:url' content={currentUrl} key='twitterUrl' />"
+    ],
+    "description": "seo tags for nextjs"
   },
   /* JAVASCRIPT(ES6) SNIPPETS */
   "javascript-comment": {
